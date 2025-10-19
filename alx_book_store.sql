@@ -36,7 +36,7 @@ create table Order_Details (
     order_id int,
     book_id INT,
     quantity DOUBLE not null check (quantity > 0), 
-    FOREIGN KEY (order_id) REFERENCES Order(order_id)
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id)
 		on update cascade
         on delete cascade,
 	FOREIGN KEY (book_id) REFERENCES Books(book_id)
