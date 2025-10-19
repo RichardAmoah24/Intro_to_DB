@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS Order_Datails (
 orderdetialid INT AUTO_INCREMENT PRIMARY KEY,
 order_id INT,
 book_id INT, 
-quality DOUBLE NOT NULL CHECK (quantity > 0), 
+quantity DOUBLE NOT NULL CHECK (quantity > 0), 
 FOREIGN KEY (order_id) REFERENCES Order(order_id)
 	ON UPDATE CASCADE
     ON DELETE CASCADE,
