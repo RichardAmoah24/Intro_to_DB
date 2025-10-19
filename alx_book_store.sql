@@ -5,7 +5,7 @@ author_id int auto_increment primary key,
 author_name varchar(215) not null
 );
 
-create table Books (
+CREATE TABLE Books (
 book_id int auto_increment primary key,
 title varchar(130) not null,
 author_id int,
