@@ -6,7 +6,7 @@ author_name varchar(215) not null
 );
 
 CREATE TABLE Books (
-book_id int auto_increment primary key,
+book_id int auto_increment PRIMARY KEY,
 title varchar(130) not null,
 author_id int,
 price double not null,
@@ -15,8 +15,8 @@ foreign key (author_id) references Authors(author_id)
 	on update cascade
     on delete set null
 );
-create table Orders(
-	order_id int auto_increment primary key,
+CREATE TABLE Orders(
+	order_id int auto_increment PRIMARY KEY,
     customer_id int,
     order_date Date not null,
     foreign key (customer_id) references Customers(customer_id)
