@@ -15,6 +15,13 @@ foreign key (author_id) references Authors(author_id)
 	on update cascade
     on delete set null
 );
+
+CREATE TABLE Customers (
+	customer_id INT AUTO_INCREMENT PRIMARY KEY,
+	customer_name VARCHAR(215) NOT NULL,
+	email VARCHAR(215) UNIQUE NOT NULL, 
+	address TEXT
+);
 CREATE TABLE Orders(
 	order_id int auto_increment PRIMARY KEY,
     customer_id int,
