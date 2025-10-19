@@ -31,15 +31,15 @@ CREATE TABLE Orders(
         on delete cascade
 );
 
-create table order_details (
+create table Order_Details (
 	ordertailid int auto_increment primary key,
     order_id int,
-    book_id int,
-    quantity double not null check (quantity > 0), 
-    foreign key (order_id) references order(order_id)
+    book_id INT,
+    quantity DOUBLE not null check (quantity > 0), 
+    FOREIGN KEY (order_id) references order(order_id)
 		on update cascade
         on delete cascade,
-	foreign key (book_id) references Books(book_id)
+	FOREIGN KEY (book_id) REFERENCES Books(book_id)
 		on update cascade
 );
 
