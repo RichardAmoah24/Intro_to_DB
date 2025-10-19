@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS Orders (
         ON DELETE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS Order_Datails (
+CREATE TABLE IF NOT EXISTS Order_Details (
 orderdetialid INT AUTO_INCREMENT PRIMARY KEY,
 order_id INT,
 book_id INT, 
