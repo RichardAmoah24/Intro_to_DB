@@ -23,9 +23,9 @@ CREATE TABLE Customers (
 	address TEXT
 );
 CREATE TABLE Orders(
-	order_id int auto_increment PRIMARY KEY,
+	order_id INT auto_increment PRIMARY KEY,
     customer_id int,
-    order_date Date not null,
+    order_date DATE not null,
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 		on update cascade
         on delete cascade
