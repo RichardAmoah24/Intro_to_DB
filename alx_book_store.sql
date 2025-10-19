@@ -26,7 +26,7 @@ CREATE TABLE Orders(
 	order_id int auto_increment PRIMARY KEY,
     customer_id int,
     order_date Date not null,
-    foreign key (customer_id) references Customers(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 		on update cascade
         on delete cascade
 );
